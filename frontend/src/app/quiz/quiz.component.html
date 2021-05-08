@@ -1,0 +1,24 @@
+<p>quiz works!</p>
+
+<div *ngFor="let quesObj of questionsArr; let i=index;">
+    <div>
+        {{quesObj.question}}
+    </div>
+    <div *ngIf="quesObj.type==='textbox'">
+        <input name="text_{{i}}" [(ngModel)]="answersArr[i]" type="text" placeholder="Type your answer" />
+    </div>
+    <div *ngIf="quesObj.type==='dropdown'">
+        <select name="dropdown_{{i}}" [(ngModel)]="answersArr[i]">
+            <option value="">Select</option>
+            <option value="{{opt}}" *ngFor="let opt of quesObj.options">
+                {{opt}}
+            </option>
+        </select>
+    </div>
+    <div *ngIf="quesObj.type==='radio'">
+        <ng-container *ngFor="let opt of quesObj.options">
+            <input type="radio" value="{{opt}}" name="radio_{{i}}" (click)="setValueForRadio(opt,i)" /> {{opt}}
+        </ng-container>
+    </div>
+</div>
+<input type="button" value="Submit" (click)="onSubmit()" />

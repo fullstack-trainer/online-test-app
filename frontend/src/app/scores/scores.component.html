@@ -1,0 +1,17 @@
+<p>scores works!</p>
+<table>
+    <thead>
+        <th>#</th>
+        <th>Date</th>
+        <th>Username</th>
+        <th>Score</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of scores; let i=index">
+            <td>{{i+1}}</td>
+            <td>{{item.date | date:'dd-MMM-yyy h:mm a'}}</td>
+            <td>{{item.username}}</td>
+            <td>{{item.score}}</td>
+        </tr>
+    </tbody>
+</table>

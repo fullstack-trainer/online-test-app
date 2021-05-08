@@ -1,0 +1,29 @@
+[
+    {
+        "question": "What is the current month?",
+        "type": "dropdown",
+        "options": [
+            "April",
+            "May",
+            "June",
+            "July"
+        ],
+        "answer": "May"
+    },
+    {
+        "question": "What is the capital of US?",
+        "type": "radio",
+        "options": [
+            "Washington DC",
+            "NJ",
+            "Alaska",
+            "San jose"
+        ],
+        "answer": "Washington DC"
+    },
+    {
+        "question": "Which is the longest river?",
+        "type": "textbox",
+        "answer": "nile"
+    }
+]
